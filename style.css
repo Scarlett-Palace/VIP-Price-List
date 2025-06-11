@@ -283,150 +283,128 @@
             background: linear-gradient(135deg, #4e00c2, #00ffd5);
         }
 
+    .bucks-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 600px) {
         .bucks-cards {
-            display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            padding: 40px 0;
-            max-width: 1000px;
-            margin: 0 auto;
         }
+    }
 
-        .bucks-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
+    @media (min-width: 1000px) {
+        .bucks-cards {
+            grid-template-columns: 1fr 1fr 1fr;
         }
+    }
 
-        .bucks-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(139, 69, 255, 0.3);
-            box-shadow: 0 25px 50px rgba(139, 69, 255, 0.15);
-        }
+    .bucks-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
-        .bucks-card.full-width {
-            grid-column: 1 / -1;
-            max-width: 900px;
-            justify-self: center;
-        }
+    .bucks-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(139, 69, 255, 0.3);
+        box-shadow: 0 25px 50px rgba(139, 69, 255, 0.15);
+    }
 
-        .bucks-card-inner {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            height: 100%;
-        }
+    .bucks-card-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+    }
 
-        .bucks-card.full-width .bucks-card-inner {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 40px;
-        }
+    .bucks-title,
+    .bucks-sub,
+    .bucks-price,
+    .bucks-price-2,
+    .bucks-price-3 {
+        text-align: center;
+    }
 
-        .bucks-left {
-            flex: 0 0 280px;
-        }
+    .bucks-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 0 0 15px;
+        line-height: 1.2;
+    }
 
-        .bucks-right {
-            flex: 1;
-        }
+    .bucks-price,
+    .bucks-price-2,
+    .bucks-price-3 {
+        font-size: 1.6rem;
+        font-weight: 650;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+    }
 
-        .bucks-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 0 0 15px;
-            line-height: 1.2;
-            text-align: center;
-        }
-        
-        .bucks-card.full-width .bucks-title {
-            text-align: left;
-        }
+    .bucks-price {
+        background: linear-gradient(135deg, #4e00c2, #00ffd5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-        .bucks-price {
-            font-size: 1.6rem;
-            font-weight: 650;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #4e00c2, #00ffd5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-            text-align: center;
-        }
+    .bucks-price-2 {
+        background: linear-gradient(135deg, #8B45FF, #00c853);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-        .bucks-price-2 {
-            font-size: 1.6rem;
-            font-weight: 650;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #8B45FF, #00c853);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-            text-align: center;
-        }
+    .bucks-price-3 {
+        background: linear-gradient(135deg, #ffd700, #00c853);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-        .bucks-price-3 {
-            font-size: 1.6rem;
-            font-weight: 650;
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #ffd700, #00c853);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-            text-align: center;
-        }
-        
-        .bucks-card.full-width .bucks-price,
-        .bucks-card.full-width .bucks-price-2,
-        .bucks-card.full-width .bucks-price-3 {
-            text-align: left;
-        }
+    .bucks-sub {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
 
-        .bucks-sub {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 20px;
-            line-height: 1.4;
-            text-align: center;
-        }
-        
-        .bucks-card.full-width .bucks-sub {
-            text-align: left;
-        }
+    .bucks-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+    }
 
-        .bucks-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex: 1;
-        }
+    .bucks-features li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.4;
+    }
 
-        .bucks-features li {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-            line-height: 1.4;
-        }
+    .bucks-features li::before {
+        content: "✅";
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
 
-        .bucks-features li::before {
-            content: "✅";
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
 
         /* VIP Dance List Table */
         .vip-table {
