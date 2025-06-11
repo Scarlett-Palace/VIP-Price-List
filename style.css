@@ -240,27 +240,27 @@
             background: linear-gradient(135deg, #4e00c2, #00ffd5);
         }
 
-        .bucks-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            padding: 40px 0;
-            align-items: center;
-        }
+.bucks-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    align-items: center;
+}
 
-        .bucks-card {
-            width: 100%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            display: flex;
-            gap: 20px;
-        }
-
+.bucks-card {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
         .bucks-title {
             font-size: 2rem;
             font-weight: 800;
