@@ -1,4 +1,4 @@
- * {
+{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -28,10 +28,48 @@
             z-index: -1;
         }
 
+        /* Navigation Menu */
+        
+        
+        .nav-menu {
+          margin-left: auto;
+          margin-right: auto;
+    display: justify;
+  justify-content: center;
+  position: sticky;
+  z-index: 999;
+            top: 20px;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 15px 20px;
+            display: flex;
+            max-width: 340px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(139, 69, 255, 0.2);
+            color: white;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 60px 20px 0;
         }
 
         .section {
@@ -240,35 +278,75 @@
             background: linear-gradient(135deg, #4e00c2, #00ffd5);
         }
 
-.bucks-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 0;
-    align-items: center;
-}
+        .bucks-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-.bucks-card {
-    width: 100%;
-    max-width: 900px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 40px 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        .bucks-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bucks-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(139, 69, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(139, 69, 255, 0.15);
+        }
+
+        .bucks-card.full-width {
+            grid-column: 1 / -1;
+            max-width: 900px;
+            justify-self: center;
+        }
+
+        .bucks-card-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .bucks-card.full-width .bucks-card-inner {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .bucks-left {
+            flex: 0 0 280px;
+        }
+
+        .bucks-right {
+            flex: 1;
+        }
+
         .bucks-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            margin: 0 0 10px;
+            margin: 0 0 15px;
+            line-height: 1.2;
+            text-align: center;
+        }
+        
+        .bucks-card.full-width .bucks-title {
+            text-align: left;
         }
 
         .bucks-price {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 650;
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #4e00c2, #00ffd5);
@@ -277,10 +355,11 @@
             background-clip: text;
             margin-bottom: 10px;
             letter-spacing: -0.02em;
+            text-align: center;
         }
 
         .bucks-price-2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 650;
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #8B45FF, #00c853);
@@ -289,10 +368,11 @@
             background-clip: text;
             margin-bottom: 10px;
             letter-spacing: -0.02em;
+            text-align: center;
         }
 
         .bucks-price-3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 650;
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #ffd700, #00c853);
@@ -301,42 +381,46 @@
             background-clip: text;
             margin-bottom: 10px;
             letter-spacing: -0.02em;
+            text-align: center;
+        }
+        
+        .bucks-card.full-width .bucks-price,
+        .bucks-card.full-width .bucks-price-2,
+        .bucks-card.full-width .bucks-price-3 {
+            text-align: left;
         }
 
         .bucks-sub {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.75);
             margin-bottom: 20px;
+            line-height: 1.4;
+            text-align: center;
+        }
+        
+        .bucks-card.full-width .bucks-sub {
+            text-align: left;
         }
 
         .bucks-features {
             list-style: none;
             padding: 0;
             margin: 0;
+            flex: 1;
         }
 
         .bucks-features li {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 10px;
             display: flex;
             align-items: flex-start;
+            line-height: 1.4;
         }
 
         .bucks-features li::before {
             content: "✅";
             margin-right: 10px;
             flex-shrink: 0;
-        }
-
-        @media (min-width: 768px) {
-            .bucks-card {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-            .bucks-card>* {
-                width: 48%;
-            }
         }
 
         /* VIP Dance List Table */
@@ -347,6 +431,9 @@
             border-radius: 20px;
             overflow: hidden;
             margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .vip-table table {
@@ -376,4 +463,64 @@
         
         .vip-table tr:hover {
             background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* Responsive design for bucks cards */
+        @media (max-width: 400px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 15px;
+                top: 10px;
+                right: 10px;
+            }
+
+            .container {
+                padding-top: 120px;
+            }
+
+            .bucks-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .bucks-card.full-width {
+                grid-column: 1;
+            }
+            
+            .bucks-card-inner,
+            .bucks-card.full-width .bucks-card-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .bucks-left {
+                flex: none;
+            }
+            
+            .bucks-title,
+            .bucks-card.full-width .bucks-title {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+            .bucks-price,
+            .bucks-price-2,
+            .bucks-price-3,
+            .bucks-card.full-width .bucks-price,
+            .bucks-card.full-width .bucks-price-2,
+            .bucks-card.full-width .bucks-price-3 {
+                font-size: 1.4rem;
+                text-align: center;
+            }
+            
+            .bucks-sub,
+            .bucks-card.full-width .bucks-sub {
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
