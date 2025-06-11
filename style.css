@@ -57,7 +57,7 @@
             padding: 8px 12px;
             border-radius: 8px;
             transition: all 0.3s ease;
-            text-align: centre;
+            text-align: center;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -262,7 +262,7 @@
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
-            width: 70%;
+            width: 90%;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
